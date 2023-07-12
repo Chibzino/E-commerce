@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-links {
+    @apply cursor-pointer text-[20px]
+     font-semibold text-[#1a1a1a] hover:text-[#088178] transition duration-300 ease-in-out;
+  }
+
+  .footer-col {
+    @apply text-gray-500 text-[12px] hover:text-[#088178];
+  }
+
+  .input-section {
+    @apply w-[100%] border border-gray-400 outline-none py-1 px-2;
+  }
+}

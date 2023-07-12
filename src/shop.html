@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+  </head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body>
+   <!--Header-->
+   <header
+      id="header"
+      class="flex justify-between items-center content-center shadow-md sticky top-0 z-50 md:py-[20px] bg-[#e3e6f3]  px-10 py-5 relative"
+    >
+      <!--Logo-->
+     <div class="  ">
+       <a  href="#"
+        ><img src="/Images/logo (1).png" alt=""
+      /></a>
+     </div>
+
+<div class="flex flex-row ">
+      <!--Nav-bar-->
+      <div  class= "nav-bar hidden lg:mr-28 transition  duration-500 ease-in-out  absolute bg-[#e3e6f3] h-[80vh] right-6=0 w-[450px]    shadow-sm md:inline-flex md:static md:h-fit md:shadow-none md:right-40">
+        <ul id="navbar" class="flex absolute left-6 top-[8vh]  flex-col items-start gap-[4vw] md:static md:h-fit md:flex-row md:items-center px-[15px]">
+          <li>
+            <a class="nav-links" href="index.html">Home</a>
+          </li>
+          <li><a class="nav-links" href="shop.html">Shop</a></li>
+          <li><a class="nav-links" href="blog.html">Blog</a></li>
+          <li><a class="nav-links" href="about.html">About</a></li>
+            <li><a class="nav-links" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="close-nav absolute top-[0vh] left-8 cursor-pointer hover:text-[#088178] transition duration-300 ease-in-out md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+</div>
+</div>
+
+        <!--cart  and hamburger-->
+         <div class=" flex pl-12 ">
+          <!--cart-->
+            <div id="cart" class="pr-8 cursor-pointer "
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+            </div>
+            
+
+            <!-- hamburger-->
+          <div id="hamburger-menu" class="hover:text-[#088178] md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+  </div>
+ </div>
+</div>
+      </div>
+    </header>
+
+    <!--Cart description-->
+    <section id="cart-detail" class=" hidden w-[100%] lg:w-[45%] shadow-md pt-[30px] absolute right-4 bg-white top-0 h-[100vh] overflow-y-scroll ">
+
+  <div class=" sticky top-0 pb-[10px] bg-white flex items-center justify-between px-[30px] md:px-[80px] lg:px-[40px] pt-[80px] ">
+    <p class="text-[20px] md:text-[30px]  font-semibold">Cart Items ( 1 )</p>
+
+    <div id="close-cart" class=" cursor-pointer hover:bg-slate-300 transition duration-300 ease-in-out h-8 w-8 rounded-full flex items-center justify-center text-[20px] ">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+
+      <!--cart-->
+    <main  class="flex flex-col items-center justify-center space-y-60">
+  <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+       <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+        <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+         <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+         <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+    </main>
+
+    <!--total-->
+    <section class="sticky bottom-0 z-20 px-[30px]  md:px-[80px] lg:px-[10px]   bg-white pb-[40px] md:pb-[80px]  lg:pb-[20px] pt-2">
+      <div class="total-price flex items-center justify-between  px-8">
+        <p class=" font-bold text-[16px] md:text-[25px]">Total = $444.00</p>
+
+        <div class="flex flex-col items-center justify-center">
+          <p class="text-[15px] font-semibold">Clear Cart</p>
+          <div
+            class="h-[55px] w-[55px] rounded-full text-[30px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>
+
+
+    <!--hero background-->
+    <section
+      id="hero"
+      class="h-[30vh] md:h-[40vh] bg-cover bg-top-[30%]  bg-right[30%] md:bg-top-[25%] md:bg-right-0 px-[80px] mid:px-[80px] flex flex-col items-center justify-center leading-[1.4] md:leading-[1.1]"
+      style="background-image: url('/Images/banner/b1.jpg')"
+    >
+      <div class="text-white">     
+      <h2 class="text-center md:text-start text-[50px] md:text-[65px] pb-6">#stayhome</h2>
+      <p class="text-gray-700 pb-4 text-center md:text-start">Save more with coupons & up to 70% off!</p>
+     </div>
+      </div>
+    </section>
+
+   
+
+    <!--Featured Products-->
+    <section id="product1" class="section-p1 pt-5 px-[0px] md:px-[80px] lg:px-[20px]">
+      <div class="flex items-center justify-center flex-col pb-4 ">
+        <h1 class=" text-[40px] md:text-[60px]">Featured Products</h1>
+        <p class="text-gray-500">Summer Collection New Mordern Design</p>
+      </div>
+
+      <!-- Products-->
+      <div class="products-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:px-[60px] ">
+        <!-- Product 1-->
+      <div onclick="window.location.href='singleproduct.html';" class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f1.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+        <!-- Product 2-->
+      <div class="flex items-center justify-center">
+  <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f2.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+        <!-- Product 3-->
+       <div class="flex items-center justify-center">
+ <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f3.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+       </div>
+
+        <!-- Product 4-->
+        <div class="flex items-center justify-center">
+<div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f4.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        </div>
+
+        <!-- Product 5-->
+        <div class="flex items-center justify-center">
+<div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f5.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        </div>
+
+        <!-- Product 6-->
+        <div class="flex items-center justify-center">
+<div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f6.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        </div>
+
+        <!-- Product 7-->
+        <div class="flex items-center justify-center">
+<div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f1.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        </div>
+
+        <!-- Product 8-->
+        <div class="flex place-items-center justify-center">
+<div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer mb-8 shadow-md hover:shadow-xl transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/f1.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        </div>
+
+          <!-- Product 9-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n1.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 10-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n2.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 11-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n3.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 12-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n4.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 13-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n5.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 14-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n6.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 15-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n7.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+               <!-- Product 16-->
+      <div class="flex items-center justify-center">
+          <div
+          class="w-[50%] md:w-[23%] min-w-[250px] py-[10px] px-[12px] border border-gray-300 cursor-pointer shadow-md hover:shadow-xl mb-8 transition duration-300 ease-in-out"
+        >
+          <img class="w-[100%]" src="/Images/product/n8.jpg" alt="" />
+
+          <div class="description">
+            <span class="text-gray-500 text-sm">adidas</span>
+            <h5 class="pt-[3px] text-[14px]">Cartoon Astronaut T-Shirts</h5>
+          </div>
+
+          <div class="flex pt-[2px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#fc9003"
+              viewBox="0 0 24 24"
+              stroke-width="0"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </svg>
+          </div>
+
+          <div class="flex justify-between pt-[2px]">
+            <p class="text-[#088178] font-boldS">$78</p>
+
+            <!--Cart-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-7 h-7 text-[#088178] bg-gray-100 rounded-full p-1"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+ 
+    <!--Pagination-->
+<section class="flex items-center justify-center space-x-3">
+    <a class="bg-[#088178] font-bold py-[6px] px-[12px] text-white rounded-md" href="#">1</a>
+    <a class="bg-[#088178] font-bold py-[6px] px-[12px] text-white rounded-md" href="#">2</a>
+    <a class="bg-[#088178] py-[6px] px-[12px] text-white rounded-md " href="#"><i class='fa fa-arrow-right'></i></a>
+</section>
+
+    <!--Sign up section-->
+    <section class="pt-8">
+      <div
+        class="bg-cover bg-center mb-[5px] py-[20px] px-[10px] md:px-[40px] bg-[#041e42] pb-12"
+        style="background-image: url('/Images/banner/b14.png')"
+      >
+        <h4 class="text-[22px] text-white font-[700] pb-4">
+          Sign Up For Newsletters
+        </h4>
+
+        <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between">
+          <div class="pb-8 md:pb-0">
+            <p class="text-[14px] font-[14px] text-gray-500">
+              Get E-mail updates about our latest shop and
+              <span class="text-[#ffbd27] cursor-pointer">special offers.</span>
+            </p>
+          </div>
+
+          <div class="flex flex-row">
+            <input
+              class="h-[2.5rem] rounded-sm px-[2em] border text-[14px] w-[100%] border-0 border-transparent outline-none"
+              type="text"
+              placeholder="Your email address"
+            />
+            <button
+              class="bg-[#088178] text-white h-[2.5rem] text-sm w-32 rounded-sm"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class=" px-[20px] md:px-[80px] pt-8">
+   
+      <!--columns-->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+     <!--col 1-->
+      <div class="text-sm">
+        <!--logo-->
+        <img src="/Images/logo (1).png" alt="" />
+
+        <!--Contact-->
+        <div>
+          <h4 class="text-[20px] font-semibold pt-8">Contact</h4>
+          <p class="pt-4 pb-2">
+            <strong class="font-semibold">Address:</strong>
+            <span class="text-[12px] text-gray-500"
+              >Wellington Road. Street 32 San Francisco</span
+            >
+          </p>
+          <p class="pb-2">
+            <strong class="font-semibold">Phone:</strong>
+            <span class="text-[12px] text-gray-500"
+              >+012222 365/(+91) 01 23456789</span
+            >
+          </p>
+          <p class="pb-2">
+            <strong class="font-semibold">Hours:</strong>
+            <span class="text-[12px] text-gray-500"
+              >10.00 - 18.00. Mon - Sat
+            </span>
+          </p>
+        </div>
+
+        <!--follow us-->
+        <div>
+          <h1 class="text-[16px] font-semibold">Follow Us</h1>
+
+          <div class="pt-2 flex space-x-2">
+            <a href="#" class="fa fa-facebook hover:text-[#088178]"></a>
+            <a href="#" class=" fa fa-twitter hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-pinterest hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-youtube hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-instagram  hover:text-[#088178]"></a>
+          </div>
+        </div>
+      </div>
+
+      <!--col2 About-->
+      <div class="leading-6">
+        <h1 class="text-[16px] font-semibold">About</h1>
+        <p class="footer-col"><a href="">About Us</a></p>
+        <p class="footer-col"><a href="">Delivery Information</a></p>
+        <p class="footer-col"><a href="">Privacy Policy</a></p>
+        <p class="footer-col"><a href="">Terms & Conditions</a></p>
+        <p class="footer-col"><a href="">Contact Us</a></p>
+      </div>
+
+      
+      <!--col3-->
+      <div class="leading-6">
+        <h1 class="text-[16px] font-semibold">My Account</h1>
+        <p class="footer-col">Sign In</p>
+        <p class="footer-col">View Cart</p>
+        <p class="footer-col">My Wishlist</p>
+        <p class="footer-col">Track My Oder</p>
+        <p class="footer-col">Help</p>
+      </div>
+
+       
+      <!--col4-->
+      <div class="leading-6 pr-[45px]">
+        <h1 class="text-[16px] font-semibold">Install App</h1>
+        <p class="text-[12px] text-gray-500">From Google Play</p>
+        <div class="flex flex-col md:flex-row items-start pt-2 pb-4 md:pb-6  ">
+          <img class="  rounded-md mb-4 md:mb-0 border border-[#088178] cursor-pointer mr-2" src="/Images/pay/app.jpg" alt="">
+          <img class=" rounded-md border border-[#088178] cursor-pointer" src="/Images/pay/play.jpg" alt="">
+        </div>
+        <p  class="pb-2 text-gray-500 text-[12px]">Secured Payment Gateways</p>
+       <div class="cursor-pointer">
+        <img src="/Images/pay/pay.png" alt="">
+       </div>
+      </div>
+</div>
+      
+      <!--Copywrite-->
+      <div class="pt-12 pb-12 text-center">      <p class="footer-col">&#169 2021 Touc2 etc. HTML CSS Ecommerce Template</p>
+      </div>
+    </section>
+
+
+    <script src="/src/ecom.js"></script>
+  </body>
+</html>

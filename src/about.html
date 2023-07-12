@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+  </head>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <body>
+   <!--Header-->
+     <header
+      id="header"
+      class="flex justify-between items-center content-center shadow-md sticky top-0 z-50 md:py-[20px] bg-[#e3e6f3]  px-10 py-5 relative"
+    >
+      <!--Logo-->
+     <div class="  ">
+       <a  href="#"
+        ><img src="/Images/logo (1).png" alt=""
+      /></a>
+     </div>
+
+<div class="flex flex-row ">
+      <!--Nav-bar-->
+      <div  class= "nav-bar hidden lg:mr-28 transition  duration-500 ease-in-out  absolute bg-[#e3e6f3] h-[80vh] right-6=0 w-[450px]    shadow-sm md:inline-flex md:static md:h-fit md:shadow-none md:right-40">
+        <ul id="navbar" class="flex absolute left-6 top-[8vh]  flex-col items-start gap-[4vw] md:static md:h-fit md:flex-row md:items-center px-[15px]">
+          <li>
+            <a class="nav-links" href="index.html">Home</a>
+          </li>
+          <li><a class="nav-links" href="shop.html">Shop</a></li>
+          <li><a class="nav-links" href="blog.html">Blog</a></li>
+          <li><a class="nav-links" href="about.html">About</a></li>
+            <li><a class="nav-links" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="close-nav absolute top-[0vh] left-8 cursor-pointer hover:text-[#088178] transition duration-300 ease-in-out md:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+</div>
+</div>
+
+        <!--cart  and hamburger-->
+         <div class=" flex pl-12 ">
+          <!--cart-->
+            <div id="cart" class="pr-8 cursor-pointer "
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+            </div>
+            
+
+            <!-- hamburger-->
+          <div id="hamburger-menu" class="hover:text-[#088178] md:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+  </div>
+ </div>
+</div>
+      </div>
+    </header>
+
+    <!--Cart description-->
+    <section id="cart-detail" class=" hidden w-[100%] lg:w-[45%] shadow-md pt-[30px] absolute right-4 bg-white top-0 h-[100vh] overflow-y-scroll ">
+
+  <div class=" sticky top-0 pb-[10px] bg-white flex items-center justify-between px-[30px] md:px-[80px] lg:px-[40px] pt-[80px] ">
+    <p class="text-[20px] md:text-[30px]  font-semibold">Cart Items ( 1 )</p>
+
+    <div id="close-cart" class=" cursor-pointer hover:bg-slate-300 transition duration-300 ease-in-out h-8 w-8 rounded-full flex items-center justify-center text-[20px] ">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+
+      <!--cart-->
+    <main  class="flex flex-col items-center justify-center space-y-60">
+  <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+       <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+        <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+
+         <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+         <article class=" pt-6 md:pt-8 ">
+     <div class="w-[100%] h-[1px] bg-gray-400 ">
+    <section class="flex flex-col md:flex-row items-center pt-4">
+
+          <!--image-->
+          <div class="flex flex-col items-center justify-center">
+            <div class="h-[200px] w-[200px]">
+              <img
+                class="w-[100%] h-[180px] md:h-[200px] mx-auto"
+                src="/Images/product/f1.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class=" pt-[5px] md:pt-[10px] text-[16px] font-bold">
+              Cartoon Astronaut T-Shirt
+            </div>
+          </div>
+
+      <div class="flex flex-col space-y-3 md:space-y-12">
+            <div
+            class="flex flex-row items-center justify-center space-x-8 px-5"
+          >
+            <div class="price-field text-[20px]">$118.19</div>
+          <div
+            class="h-[25px] w-[25px] rounded-full text-[20px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+          </div>
+
+           <div 
+            class="sub-total flex flex-row items-center justify-center space-x-8 px-5"
+          >
+           <input
+              class="product-no w-[80px] border text-center border-gray-400 outline-none py-1 text-[20px]"
+              type="number"
+              value="1"
+            />
+            <div class=" item-price text-[20px] font-bold">$118.19</div>
+          </div>
+          </div>
+      </div>
+      </article>
+    </main>
+
+    <!--total-->
+    <section class="sticky bottom-0 z-20 px-[30px]  md:px-[80px] lg:px-[10px]   bg-white pb-[40px] md:pb-[80px]  lg:pb-[20px] pt-2">
+      <div class="total-price flex items-center justify-between  px-8">
+        <p class=" font-bold text-[16px] md:text-[25px]">Total = $444.00</p>
+
+        <div class="flex flex-col items-center justify-center">
+          <p class="text-[15px] font-semibold">Clear Cart</p>
+          <div
+            class="h-[55px] w-[55px] rounded-full text-[30px] cursor-pointer flex items-center justify-center hover:bg-red-600 transition duration-300 ease-in-out hover:text-white"
+          >
+            <i class="fa fa-trash-o"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+</section>
+
+
+    <!--hero background-->
+    <section
+      id="hero"
+      class="h-[30vh] md:h-[40vh] bg-cover bg-top-[30%]  bg-right[30%] md:bg-top-[25%] md:bg-right-0 px-[80px] mid:px-[80px] flex flex-col items-center justify-center leading-[1.4] md:leading-[1.1]"
+      style="background-image: url('/Images/about/banner.png')"
+    >
+      <div class="text-white">     
+      <h2 class="text-center md:text-start text-[50px] md:text-[65px] pb-6">#KnowUs</h2>
+      <p class="text-white pb-4 text-center md:text-start">Read to know all about us</p>
+     </div>
+      </div>
+    </section>
+
+    <!--details-->
+<section class="pb-16">
+     <div class="px-[50px] md:px-[50px] lg:px-[100px] pt-[80px] md:pt-[100px] ">
+    <div class="flex flex-col md:flex-row items-center justify-center w-[100%]">
+         <!--Blog image-->
+<div class="w-[90%] md:w-[50%] md:mr-[60px] relative pb-4  md:pb-0 ">
+    <img class="w-[100%] min-w-[280px] md:min-w-[350px] h-[350px] md:h-[400px] lg:h[350px] object-cover" src="/Images/about/a6.jpg" alt="">
+    </div>
+
+    <div class="w-[90%] md:w-[50%] pt-4 md:pt-16">
+    <h4 class="text-[40px] font-bold pb-3">Who We Are?
+    </h4>
+    <p class="text-[16px] md:text-[20px] lg:text-[16px] text-gray-600 pb-2">Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreus hexagon irony, godard. Kickstarter man braid godard coloring book. Raclette waistcoat selfies yr wolf chartreus hexagon irony, godard. hexagon irony, godard. Kickstarter man braid godard coloring book. </p> 
+
+    <abbr title="" class="decoration-none">Create stunning images with as much or as little control as you like, thanks to a choice of basic and creative modes.</abbr>
+    <br><br>
+
+    <!--sliding text-->
+    <marquee class="bg-[#ccc] scroll-smooth w-[100%]">Create stunning images with as much or as little control as you like, thanks to a choice of basic and creative modes.</marquee>
+</div>
+</div>
+</section>
+
+<!--Video-->
+<section  class="flex flex-col items-center justify-center pb-8">
+<div class="flex items-center justify-center">
+    <h1 class=" text-[30px] md:text-[50px] font-bold">Download Our <a class="text-purple-950 underline" href="#">App</a></h1>
+</div>
+
+<div class="w-[70%] h-[100%] mt-[30px]">
+  <video autoplay muted loop class=" w-[100%] h-[100%] rounded-[30px]"   src="/Images/about/1.mp4"></video> 
+</div>
+</section>
+
+<!--Features-->
+    <section
+      id="feature "
+      class="py-[60px] px-[35px] md:px-[80px] grid grid-cols-3  lg:grid-cols-6 gap-6 "
+    >
+      <!--Feature1 -->
+      <div class="flex items-center justify-center">
+       <div
+        class="w-[180px] px-[25px]   py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f1.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#cdebbc] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          Online Order
+        </button>
+      </div>
+     </div>
+
+      <!--Feature 2-->
+     <div class="flex items-center justify-center">
+       <div
+        class="w-[180px]  px-[25px] py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f2.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#cdebbc] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          Online Order
+        </button>
+      </div>
+     </div>
+
+      <!--Feature 3-->
+     <div class="flex items-center justify-center">
+       <div
+        class="w-[180px] items-center px-[25px] py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f3.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#d1e8f2] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          Save Money
+        </button>
+      </div>
+     </div>
+
+     
+      <!--Features 5-->
+      <div class="flex items-center justify-center">
+       <div
+        class="w-[180px] items-center px-[25px] py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f4.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#d1e8f2] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          Save Money
+        </button>
+      </div>
+     </div>
+
+      <!--Features 5-->
+      <div class="flex items-center justify-center">
+       <div
+        class="w-[180px] items-center px-[25px] py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f5.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#d1e8f2] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          Save Money
+        </button>
+      </div>
+     </div>
+
+
+      <!--Features 6-->
+     <div class="flex items-center justify-center">
+       <div
+        class="w-[180px] items-center px-[25px] py-[30px] shadow-xl flex items-center flex-col border hover:shadow-sm transition duration-300 ease-in-out"
+      >
+        <img class="pb-6 w-[100%]" src="/Images/features/f6.png" alt="" />
+        <button
+          class="text-[#088178] bg-[#fff2e5] pl-[10px] pt-[4px] pb-[6px] pr-[10px] rounded-[4px] text-sm"
+        >
+          F24/7 Support
+        </button>
+      </div>
+     </div>
+    </section>
+
+     <!--Sign up section-->
+    <section class="pt-8">
+      <div
+        class="bg-cover bg-center mb-[5px] py-[20px] px-[10px] md:px-[40px] bg-[#041e42] pb-12"
+        style="background-image: url('/Images/banner/b14.png')"
+      >
+        <h4 class="text-[22px] text-white font-[700] pb-4">
+          Sign Up For Newsletters
+        </h4>
+
+        <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between">
+          <div class="pb-8 md:pb-0">
+            <p class="text-[14px] font-[14px] text-gray-500">
+              Get E-mail updates about our latest shop and
+              <span class="text-[#ffbd27] cursor-pointer">special offers.</span>
+            </p>
+          </div>
+
+          <div class="flex flex-row">
+            <input
+              class="h-[2.5rem] rounded-sm px-[2em] border text-[14px] w-[100%] border-0 border-transparent outline-none"
+              type="text"
+              placeholder="Your email address"
+            />
+            <button
+              class="bg-[#088178] text-white h-[2.5rem] text-sm w-32 rounded-sm"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class=" px-[20px] md:px-[80px] pt-8">
+   
+      <!--columns-->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+     <!--col 1-->
+      <div class="text-sm">
+        <!--logo-->
+        <img src="/Images/logo (1).png" alt="" />
+
+        <!--Contact-->
+        <div>
+          <h4 class="text-[20px] font-semibold pt-8">Contact</h4>
+          <p class="pt-4 pb-2">
+            <strong class="font-semibold">Address:</strong>
+            <span class="text-[12px] text-gray-500"
+              >Wellington Road. Street 32 San Francisco</span
+            >
+          </p>
+          <p class="pb-2">
+            <strong class="font-semibold">Phone:</strong>
+            <span class="text-[12px] text-gray-500"
+              >+012222 365/(+91) 01 23456789</span
+            >
+          </p>
+          <p class="pb-2">
+            <strong class="font-semibold">Hours:</strong>
+            <span class="text-[12px] text-gray-500"
+              >10.00 - 18.00. Mon - Sat
+            </span>
+          </p>
+        </div>
+
+        <!--follow us-->
+        <div>
+          <h1 class="text-[16px] font-semibold">Follow Us</h1>
+
+          <div class="pt-2 flex space-x-2">
+            <a href="#" class="fa fa-facebook hover:text-[#088178]"></a>
+            <a href="#" class=" fa fa-twitter hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-pinterest hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-youtube hover:text-[#088178]"></a>
+            <a href="#" class="fa fa-instagram  hover:text-[#088178]"></a>
+          </div>
+        </div>
+      </div>
+
+      <!--col2 About-->
+      <div class="leading-6">
+        <h1 class="text-[16px] font-semibold">About</h1>
+        <p class="footer-col"><a href="">About Us</a></p>
+        <p class="footer-col"><a href="">Delivery Information</a></p>
+        <p class="footer-col"><a href="">Privacy Policy</a></p>
+        <p class="footer-col"><a href="">Terms & Conditions</a></p>
+        <p class="footer-col"><a href="">Contact Us</a></p>
+      </div>
+
+      
+      <!--col3-->
+      <div class="leading-6">
+        <h1 class="text-[16px] font-semibold">My Account</h1>
+        <p class="footer-col">Sign In</p>
+        <p class="footer-col">View Cart</p>
+        <p class="footer-col">My Wishlist</p>
+        <p class="footer-col">Track My Oder</p>
+        <p class="footer-col">Help</p>
+      </div>
+
+       
+      <!--col4-->
+      <div class="leading-6 pr-[45px]">
+        <h1 class="text-[16px] font-semibold">Install App</h1>
+        <p class="text-[12px] text-gray-500">From Google Play</p>
+        <div class="flex flex-col md:flex-row items-start pt-2 pb-4 md:pb-6  ">
+          <img class="  rounded-md mb-4 md:mb-0 border border-[#088178] cursor-pointer mr-2" src="/Images/pay/app.jpg" alt="">
+          <img class=" rounded-md border border-[#088178] cursor-pointer" src="/Images/pay/play.jpg" alt="">
+        </div>
+        <p  class="pb-2 text-gray-500 text-[12px]">Secured Payment Gateways</p>
+       <div class="cursor-pointer">
+        <img src="/Images/pay/pay.png" alt="">
+       </div>
+      </div>
+</div>
+      
+      <!--Copywrite-->
+      <div class="pt-12 pb-12 text-center">      <p class="footer-col">&#169 2021 Touc2 etc. HTML CSS Ecommerce Template</p>
+      </div>
+    </section>
+>
+
+    <script src="/src/ecom.js"></script>
+  </body>
+</html>
