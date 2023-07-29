@@ -1871,6 +1871,10 @@ video {
     padding-top: 10px;
   }
 
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
   .md\:text-start {
     text-align: start;
   }
